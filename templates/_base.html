@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Untitled{% endblock title %}</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@400;500;600&family=Prompt:wght@300;400;500&family=Sarabun:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Prompt', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    
+    <!-- Navigation Bar -->
+    <nav class="bg-yellow-500 p-4 flex justify-between font-sarabun">
+        <div class="flex items-center space-x-4">
+            <!-- Logo -->
+            <a href="{% url 'home' %}">
+                <img src="{% static 'images/card-07.jpg' %}" alt="โลโก้" class="w-12 h-12 rounded-full">
+            </a>
+            <!-- Navigation Links -->
+            <a href="{% url 'home' %}" class="text-white font-bold">หน้าแรก</a>
+            <a href="#" class="text-white">ตารางเที่ยวบิน</a>
+            <a href="{% url 'detail4' %}" class="text-white">ผู้จัดทำ</a>
+        </div>
+    </nav>
+
+    <!-- Heading below nav -->
+    <h1 class="text-black text-lg font-prompt font-bold underline text-center mt-4">
+        อาหารพื้นเมืองที่มีสรรพคุณต่อสุขภาพตามวิถีภูมิปัญญาท้องถิ่นของจังหวัดอุบลราชธานี
+    </h1>
+
+    <div class="container mx-auto my-8 px-4">
+        {% block content %}{% endblock content %}
+    </div>
+
+</body>
+</html>

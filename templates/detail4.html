@@ -1,0 +1,23 @@
+
+{% extends '_base.html' %}
+{% load static %}
+
+{% block title %}ผู้จัดทำ{% endblock title %}
+
+{% block content %}
+<div class="flex flex-col items-center bg-white p-8 rounded-lg shadow-lg max-w-md mx-auto">
+
+    <div class="relative w-full"> <!-- Make container full width -->
+        <img src="{% static 'images/Nook.jpg' %}" alt="ผู้จัดทำ" class="w-full h-auto object-contain border-4 border-yellow-500 shadow-lg">
+        <div class="absolute bottom-0 right-0 bg-yellow-500 text-white text-xs font-bold px-2 py-1 rounded-full">Creator</div>
+    </div>
+
+    <h2 class="text-2xl font-mitr font-bold mt-6">นาย ฐนกร ทองสา</h2>
+
+    <p class="text-gray-700 mt-4 font-prompt text-center">
+        นักศึกษาสาขาเทคโนโลยีสารสนเทศคณะวิทยาศาสตร์มหาลัยอุบลราชธานีชื่นชอบในเทคโนโลยีและคอมพิวเตอร์สามารุเรียกชื่อเล่นผมว่านุ๊กกี้
+    </p>
+
+    <a href="{% url 'home' %}" class="mt-6 inline-block bg-orange-500 text-white px-6 py-2 rounded-full font-sarabun">กลับสู่หน้าแรก</a>
+</div>
+{% endblock content %}

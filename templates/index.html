@@ -1,0 +1,53 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block title %}Local Food{% endblock title %}
+
+{% block content %}
+
+<div class="grid md:grid-cols-3 gap-8">
+    
+    <!-- Card 1 -->
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <div class="flex justify-center">
+            <img src="{% static 'images/f0701.jpg' %}" alt="อุ๋หน่อไม้พุงปลา" class="w-40 h-40 rounded-full object-cover mt-4">
+        </div>
+        <div class="p-6 text-center">
+            <h2 class="text-xl font-mitr font-bold mb-2">อุ๋หน่อไม้พุงปลา</h2>
+            <p class="text-gray-700 mb-4 font-prompt">
+                เป็นอาหารพื้นเมืองของจังหวัดอุบลราชธานี มีลักษณะคล้ายแกงอ่อม แต่ใช้น้ำน้อยกว่า โดยนิยมใช้พุงปลาจากลุ่มแม่น้ำโขง...
+            </p>
+            <a href="{% url 'detail1' %}" class="text-white bg-orange-500 px-4 py-2 rounded font-sarabun">เรียนรู้เพิ่มเติม</a>
+        </div>
+    </div>
+    
+    <!-- Card 2 -->
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <div class="flex justify-center">
+            <img src="{% static 'images/f0902.jpg' %}" alt="แกงอ่อมหอยขม" class="w-40 h-40 rounded-full object-cover mt-4">
+        </div>
+        <div class="p-6 text-center">
+            <h2 class="text-xl font-mitr font-bold mb-2">แกงอ่อมหอยขม</h2>
+            <p class="text-gray-700 mb-4 font-prompt">
+                เป็นอาหารพื้นเมืองของจังหวัดอุบลราชธานีที่สืบทอดกันมาช้านาน ประกอบด้วยหอยขมจากธรรมชาติที่มีโปรตีนและคอลลาเจน...
+            </p>
+            <a href="{% url 'detail2' %}" class="text-white bg-orange-500 px-4 py-2 rounded font-sarabun">เรียนรู้เพิ่มเติม</a>
+        </div>
+    </div>
+    
+    <!-- Card 3 -->
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <div class="flex justify-center">
+            <img src="{% static 'images/f0303.jpg' %}" alt="หมี่กะทิ" class="w-40 h-40 rounded-full object-cover mt-4">
+        </div>
+        <div class="p-6 text-center">
+            <h2 class="text-xl font-mitr font-bold mb-2">หมี่กะทิ</h2>
+            <p class="text-gray-700 mb-4 font-prompt">
+                อาหารพื้นเมืองที่มีคุณค่าสูง ปรุงด้วยสมุนไพรพื้นบ้านที่ช่วยฟื้นฟูสุขภาพและต้านทานโรค...
+            </p>
+            <a href="{% url 'detail3' %}" class="text-white bg-orange-500 px-4 py-2 rounded font-sarabun">เรียนรู้เพิ่มเติม</a>
+        </div>
+    </div>
+    
+
+{% endblock content %}
